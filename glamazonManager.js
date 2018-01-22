@@ -1,5 +1,6 @@
 var inquirer = require('inquirer');
 var mysql = require('mysql');
+var cTable = require('console.table');
 var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
@@ -11,7 +12,6 @@ var connection = mysql.createConnection({
 });
 
 function managerPrompt() {
-    console.log('\n-----------------------\n');
     inquirer.prompt([{
         type: 'list',
         name: 'choice',
@@ -34,8 +34,6 @@ function managerPrompt() {
 }
 
 function stockDisplay(min, callback) {
-    console.log('ID | Product | Price | Stock');
-    console.log('-----------------------');
     var condition = min ? ' WHERE stock < 5' : '';
     var idArr = [];
     var stockArr = [];
@@ -43,8 +41,8 @@ function stockDisplay(min, callback) {
         for (var i in products) {
             idArr.push(products[i].id);
             stockArr.push(products[i].stock);
-            console.log(products[i].id + ' ' + products[i].product + ' $' + products[i].price + ' ' + products[i].stock);
         }
+        console.table(products);
         if (callback) {
             return refillStock(idArr, stockArr);
         }

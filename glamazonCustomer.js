@@ -25,10 +25,18 @@ function orderAgain() {
     });
 }
 
+function updateSales(id, invoice) {
+    connection.query('UPDATE products SET sales = ? WHERE id=?',[invoice, id],function(err, results){
+        if(err)throw err;
+    });
+}
+
 function invoiceDisplay(num, id) {
     connection.query('SELECT price FROM products WHERE id = ' + id, function (err, results) {
         if (err) throw err;
-        console.log('Invoice total: $' + num * parseInt(results[0].price));
+        var invoiceTotal = num * parseInt(results[0].price);
+        updateSales(id, invoiceTotal);
+        console.log('Invoice total: $' + invoiceTotal);
         orderAgain();
     });
 }

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Peter-Burns/glamazon#readme",
   "dependencies": {
+    "console.table": "^0.10.0",
     "inquirer": "^5.0.1",
     "mysql": "^2.15.0"
   }

@@ -8,3 +8,5 @@ CREATE TABLE products(
     stock INT NOT NULL,
     PRIMARY KEY(id)
 );
+ALTER TABLE products
+ADD sales INT NOT NULL DEFAULT 0;
