@@ -1,0 +1,23 @@
+{
+  "name": "glamazon",
+  "version": "1.0.0",
+  "description": "Database for inventory tracking, management and customer storefront",
+  "main": "glamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Peter-Burns/glamazon.git"
+  },
+  "author": "Pete Burns",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Peter-Burns/glamazon/issues"
+  },
+  "homepage": "https://github.com/Peter-Burns/glamazon#readme",
+  "dependencies": {
+    "inquirer": "^5.0.1",
+    "mysql": "^2.15.0"
+  }
+}
