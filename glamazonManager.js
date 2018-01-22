@@ -1,11 +1,12 @@
 var inquirer = require('inquirer');
 var mysql = require('mysql');
 var cTable = require('console.table');
+require('dotenv').config();
 var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     // Your username
-    user: process.env.password,
+    user: process.env.user,
     // Your password
     password: process.env.password,
     database: "glamazon"

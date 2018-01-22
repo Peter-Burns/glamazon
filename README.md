@@ -10,3 +10,5 @@
         3. Setup your SQL schema using the provided sql scripts
         4. Create a .env file with your sql username and password
         5. Run any of the js files in node
+    * ## Video Demo
+        * Here is a quick guide through the funcions of this application. [Video](./capture.png)
