@@ -1,6 +1,6 @@
 * # Glamazon 
     * ## Overview
-        Glamazon is a database management system that:
+        Glamazon, or graphically limited amazon, is a database management system that:
         * allows customers to order products against an inventory
         * allows managers to view, update and add inventory
         * allows supervisors to view sales figures and add departments
